@@ -14,7 +14,7 @@ export class LocalStorageService {
     }
 
     static addTodo(todo) {
-        const items = this.getTodos()
+        let items = this.getTodos()
         if (!items) {
             items = []
         }
