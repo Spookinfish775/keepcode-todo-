@@ -1,0 +1,37 @@
+$colorAlmostBlack: #202020;
+$colorClearWhite: #ffffff;
+$colorBrown: #333333;
+$colorOrange: #ea5400;
+$colorOrangeLight: #f67c00;
+$gradientOrange: linear-gradient(
+  270deg,
+  $colorOrange 0,
+  $colorOrangeLight 100%
+);
+$colorViolet: #8791fb;
+$colorVioletLight: #f828f8;
+$gradientViolet: linear-gradient(
+  270deg,
+  $colorViolet 0,
+  $colorVioletLight 100%
+);
+$colorGreenSuccess: #47d537;
+$colorRedError: #e62d2d;
+
+@mixin max($media) {
+  @media only screen and (max-width: $media) {
+    @content;
+  }
+}
+
+@mixin min($media) {
+  @media only screen and (min-width: $media) {
+    @content;
+  }
+}
+
+@mixin minmax($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}

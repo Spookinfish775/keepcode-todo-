@@ -1,0 +1,246 @@
+@import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+::selection {
+  background-color: transparent;
+}
+html,
+body {
+  background-color: $colorAlmostBlack !important;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+a,
+em,
+strong,
+abbr,
+blockquote,
+cite,
+code,
+kbd,
+pre,
+q,
+sub,
+sup,
+time,
+li {
+  color: $colorClearWhite;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: default;
+}
+
+.app_wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+._container {
+  width: 100%;
+  padding: 0 100px;
+  @include max(1000px) {
+    padding: 0 20px;
+  }
+}
+input {
+  height: 52px;
+  border-radius: 8px;
+  background-color: transparent;
+  border: 1px solid $colorOrangeLight;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px;
+  color: $colorClearWhite;
+  transition: 0.3s;
+  &::placeholder {
+    color: rgba($color: $colorClearWhite, $alpha: 0.6);
+  }
+  &:focus {
+    border: 1px solid $colorViolet;
+  }
+}
+button {
+  border: 1px solid $colorOrangeLight;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  ._buton_placeholder {
+    font-size: 34px;
+    font-weight: 100;
+    text-align: center;
+    margin: 0 0 6px 0;
+    color: $colorOrangeLight;
+    transition: 0.3s;
+  }
+  &:active {
+    border: 1px solid $colorViolet;
+    transform: scale(0.9);
+    ._buton_placeholder {
+      color: $colorViolet;
+    }
+  }
+}
+._placeholder {
+  color: rgba($color: $colorClearWhite, $alpha: 0.6);
+  font-size: 14px;
+  line-height: 32px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.1s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.1s ease-in;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-10px);
+  opacity: 0;
+}
